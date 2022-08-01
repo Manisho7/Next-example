@@ -20,7 +20,7 @@ const HomePage = (props) => {
         <title>Meetup List</title>
         <meta name="description" content="browse meetup list in react!" />
       </Head>
-      <MeetupList meetups={props.meetups} />;
+      <MeetupList meetups={props.meetups} />
     </Fragment>
   );
 };
@@ -62,7 +62,7 @@ export async function getStaticProps() {
         };
       }),
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 
